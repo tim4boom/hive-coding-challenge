@@ -7,6 +7,4 @@ class Order < ApplicationRecord
       STATUS_CANCELLED = "cancelled"
   ].freeze
 
-  #TODO
-
 end

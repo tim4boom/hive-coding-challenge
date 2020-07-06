@@ -21,7 +21,7 @@ ActiveAdmin.register Order do
   form do |f|
     f.inputs do
       f.input :recipient
-      f.input :status
+      f.input :status, as: :select, collection: Order::ALLOWED_STATUSES, prompt: "- choose -"
     end
     f.actions
   end
