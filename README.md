@@ -1,6 +1,6 @@
 # rails-coding-challenge
 
-Welcome to the Hive Logistics Ruby on Rails challenge! This challenge is designed for you and us to get an estimate of your current Rails abilities, as well as where there is still room for improvement. Clone this repository and run `bundle install` to get up and running. Then fill out and modify the code skeleton we've provided to complete the exercises below.
+Welcome to the Hive Logistics Ruby on Rails challenge! This challenge is designed for you and us to get an estimate of your current Rails abilities, as well as where there is still room for improvement. Clone this repository and run `bundle install` to get up and running. Then fill out and modify the code skeleton we've provided to complete the exercises below. To try out the ActiveAdmin interface, run `rails s` and go to localhost:3000/admin in your browser.
 
 ## Context
 To give you a taste of life at Hive, we've chosen a (simplified) example from real life: Since we are a fulfillment company, we want to keep track of customer orders (we've already created this model for you in order.rb). Each order has a recipient and a status, which describes how far it is in the fulfillment process. Additionally, each Order is associated with one or more order items  - for example a user might place an order on Shopify that consists of a T-Shirt and a pair of socks. 
