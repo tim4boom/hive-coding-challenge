@@ -13,6 +13,9 @@ class Order < ApplicationRecord
 
   validates :recipient, :status, presence: true
   validates_associated :order_items
+
+  # Recipient Email
+  # With more time, I'd write validations for zipcodes and phone numbers, depending on the country
   validates_format_of :recipient, with: EMAIL
 
   def title
