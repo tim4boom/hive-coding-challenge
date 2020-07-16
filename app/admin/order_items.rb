@@ -8,6 +8,7 @@ ActiveAdmin.register OrderItem do
   permit_params :product_name, :order_id
 
   index do
+    selectable_column
     column :product_name
     column 'Item of Order' do |item|
       "#{item.order.id} - #{item.order.recipient} (#{item.order.status})"
