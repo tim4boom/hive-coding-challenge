@@ -11,6 +11,7 @@ class Order < ApplicationRecord
 
   validates :recipient, :status, presence: true
   validates_associated :order_items
+  validates_format_of :recipient, with: /([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})/i
 
   def title
     "#{id} - #{recipient} (#{status})"
