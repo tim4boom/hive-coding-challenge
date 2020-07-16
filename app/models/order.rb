@@ -7,4 +7,5 @@ class Order < ApplicationRecord
       STATUS_CANCELLED = "cancelled"
   ].freeze
 
+  has_many :order_items, dependent: :destroy
 end
