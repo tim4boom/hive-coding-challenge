@@ -32,8 +32,10 @@ ActiveAdmin.register OrderItem do
   form do |f|
     f.inputs do
       f.input :product_name
-      # Make it impossible to add OrderItems to an Order that has already been 'shipped' or 'cancelled'
-      f.input :order, as: :select, collection: Order.all.reject { |order| order.status == 'shipped' || order.status == 'cancelled' }, prompt: '- choose order -'
+      f.input :order, as: :select, collection: Order
+        .all
+        # Make it impossible to add OrderItems to an Order that has already been 'shipped' or 'cancelled'
+        .reject { |order| order.status == 'shipped' || order.status == 'cancelled' }, prompt: '- choose order -'
     end
     f.actions
   end
