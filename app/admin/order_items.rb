@@ -17,4 +17,15 @@ ActiveAdmin.register OrderItem do
     actions
   end
 
+  show do
+    attributes_table title: 'Details' do
+      row :product_name
+      row 'Item of Order' do |item|
+        link_to admin_order_path(item.order.id) do
+          "#{item.order.id} - #{item.order.recipient} (#{item.order.status})"
+        end
+      end
+      row :created_at
+    end
+  end
 end
