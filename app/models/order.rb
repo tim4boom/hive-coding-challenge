@@ -16,6 +16,6 @@ class Order < ApplicationRecord
   validates_format_of :recipient, with: EMAIL
 
   def title
-    "#{id} - #{recipient.match(Order::EMAIL)} (#{status})"
+    "#{id} - #{recipient.match(EMAIL)} (#{status})"
   end
 end
