@@ -28,4 +28,12 @@ ActiveAdmin.register OrderItem do
       row :created_at
     end
   end
+
+  form do |f|
+    f.inputs do
+      f.input :product_name
+      f.input :order, as: :select, collection: Order.all
+    end
+    f.actions
+  end
 end
