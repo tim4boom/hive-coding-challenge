@@ -8,4 +8,8 @@ class Order < ApplicationRecord
   ].freeze
 
   has_many :order_items, dependent: :destroy
+
+  def title
+    "#{id} - #{recipient} (#{status})"
+  end
 end
