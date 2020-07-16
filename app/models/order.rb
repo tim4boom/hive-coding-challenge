@@ -9,6 +9,9 @@ class Order < ApplicationRecord
 
   has_many :order_items, dependent: :destroy
 
+  validates :recipient, :status, presence: true
+  validates_associated :order_items
+
   def title
     "#{id} - #{recipient} (#{status})"
   end
