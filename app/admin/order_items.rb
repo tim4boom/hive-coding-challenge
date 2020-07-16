@@ -11,7 +11,7 @@ ActiveAdmin.register OrderItem do
     selectable_column
     column :product_name
     column 'Item of Order' do |item|
-      "#{item.order.id} - #{item.order.recipient} (#{item.order.status})"
+      "#{item.order.id} - #{item.order.recipient.match(Order::EMAIL)} (#{item.order.status})"
     end
     column :created_at
     actions
